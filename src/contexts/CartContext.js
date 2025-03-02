@@ -25,12 +25,12 @@ const CartProvider = ({ children }) => {
       const existingItem = prevCart.find((item) => item.id === product.id);
   
       if (existingItem) {
-        // If item exists, increase its amount instead of adding a duplicate
+    
         return prevCart.map((item) =>
           item.id === product.id ? { ...item, amount: item.amount + 1 } : item
         );
       } else {
-        // If item does not exist, add it with amount 1
+     
         return [...prevCart, { ...product, amount: 1 }];
       }
     });

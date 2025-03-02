@@ -8,11 +8,7 @@ const ProductDetails = () => {
   const { products } = useContext(ProductContext);
   const { addtocart } = useContext(CartContext);
 
-  // Debugging logs
-  console.log('Products:', products);
-  console.log('Product ID from URL:', id);
 
-  // Check if products is undefined or empty
   if (!products || products.length === 0) {
     return (
       <section className='h-screen flex justify-center items-center'>
@@ -21,10 +17,10 @@ const ProductDetails = () => {
     );
   }
 
-  // Find the product by ID
+
   const product = products.find((item) => item.id === Number(id));
 
-  // If product is not found
+ 
   if (!product) {
     return (
       <section className='h-screen flex justify-center items-center'>
@@ -33,7 +29,6 @@ const ProductDetails = () => {
     );
   }
 
-  // Destructure product details
   const { title, price, description, image } = product;
 
   return (
@@ -41,12 +36,12 @@ const ProductDetails = () => {
       <div className='container mx-auto'>
         <div className='flex flex-col lg:flex-row items-center'>
           
-          {/* Product Image */}
+          
           <div className='flex flex-1 justify-center items-center mb-8 lg:mb-0'>
             <img className='max-w-[200px] lg:max-w-sm' src={image} alt={title} />
           </div>
 
-          {/* Product Details */}
+   
           <div className='flex-1 text-center lg:text-left'>
             <h1 className='text-[26px] font-medium mb-2 max-w-[450px] mx-auto lg:mx-0'>{title}</h1>
             <div className='mb-6 text-xl text-red-500 font-medium'>₹{price}</div>

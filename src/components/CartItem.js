@@ -10,14 +10,12 @@ const CartItem = ({ item }) => {
   return (
     <div className="flex gap-x-4 py-4 lg:px-6 border-b border-gray-200 w-full font-light text-gray-500">
       <div className="w-full flex items-center gap-x-4">
-        {/* Product Image */}
         <Link to={`/products/${id}`} className="flex-shrink-0">
           <img className="w-[80px] h-auto object-contain" src={image} alt={title} />
         </Link>
 
-        {/* Product Details */}
         <div className="w-full flex flex-col">
-          {/* Title & Remove Button */}
+   
           <div className="flex justify-between items-center mb-2">
             <Link
               className="text-sm uppercase font-medium max-w-[240px] text-primary hover:underline"
@@ -52,10 +50,9 @@ const CartItem = ({ item }) => {
               </button>
             </div>
 
-            {/* Individual Price */}
+           
             <div className="text-gray-700 text-base font-semibold">${price.toFixed(2)}</div>
 
-            {/* Total Price */}
             <div className="ml-auto text-primary font-semibold text-base">
               ${`${(price * amount).toFixed(2)}`}
             </div>
