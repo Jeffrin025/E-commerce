@@ -12,8 +12,8 @@ const Hero = () => {
             New Trend 
           </div>
           <h1 className='text-[70px] leading-[1.1] font-light mb-4'>
-            AUTUMN SALE STYLISH <br />
-            <span className='font-semibold'>WOMENS</span>
+          ELEVATE YOUR STYLE <br />
+            <span className='font-semibold'>ELEGANT</span>
           </h1>
           <Link to='/' className='self-start uppercase font-semibold border-b-2 border-primary'>
             Discover More
